@@ -1,11 +1,23 @@
 use Mix.Config
 
+db_pass_from_env =
+  System.get_env("DB_PASS_FROM_ENV") ||
+    raise """
+    devi settare la password del database
+    """
+
+db_local =
+  System.get_env("DB_LOCAL") ||
+    raise """
+    devi settare il database
+    """
+
 # Configure your database
 config :live_view_studio, LiveViewStudio.Repo,
   username: "postgres",
-  password: "postgres",
+  password: db_pass_from_env,
   database: "live_view_studio_dev",
-  hostname: "localhost",
+  hostname: db_local,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
