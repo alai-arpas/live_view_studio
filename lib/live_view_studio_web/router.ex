@@ -34,6 +34,8 @@ defmodule LiveViewStudioWeb.Router do
     live "/infinite-scroll", InfiniteScrollLive
     live "/sandbox", SandboxLive
     live "/andrea", AndreaLive
+    live "/chart", ChartLive
+    live "/map", MapLive
   end
 
   # Other scopes may use custom stacks.
