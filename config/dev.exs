@@ -1,8 +1,8 @@
 use Mix.Config
 
-cae_url =   System.get_env("CAE_URL") || raise "devi settare CAE_URL"
-cae_user =   System.get_env("CAE_USER") || raise "devi settare CAE_USER"
-cae_pass =   System.get_env("CAE_PASS") || raise "devi settare CAE_PASS"
+cae_url =   System.get_env("CAE_REST_url") || raise "devi settare CAE_REST_url"
+cae_user =   System.get_env("CAE_REST_user") || raise "devi settare CAE_REST_user"
+cae_pass =   System.get_env("CAE_REST_password") || raise "devi settare CAE_REST_password"
 
 db_pass_from_env =
   System.get_env("DB_PASS_FROM_ENV") ||
